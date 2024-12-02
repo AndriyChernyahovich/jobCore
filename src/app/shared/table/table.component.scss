@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.shared-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 1rem;
+  text-align: left;
+  border: 1px solid#ddd;
+
+  &-body {
+    td:not(:first-child) {
+      text-align: center;
+    }
+  }
+
+  & th {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    vertical-align: middle;
+  }
+
+  & td {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    vertical-align: middle;
+  }
+}
+
+.shared-table-head th {
+  text-transform: uppercase;
+  color: gray;
+}
+
+.book-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+
+  &-img {
+    width: 50px;
+    height: 50px;
+  }
+}

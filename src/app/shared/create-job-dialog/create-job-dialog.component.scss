@@ -1,0 +1,30 @@
+.create-job {
+  display: flex;
+}
+
+.job-image {
+    width: 100px;
+    height: 100px;
+}
+
+.create-right textarea {
+    min-width: 300px;
+    min-height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #faf9fd;
+    padding: 5px;
+    outline: none;
+}
+
+.right-amount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.amount-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

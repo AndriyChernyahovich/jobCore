@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="logo">
+    <a href="">Company</a>
+  </div>
+  <div class="navigation">
+    <a
+      routerLink="/"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Book now</a
+    >
+    <a routerLink="/open-jobs" routerLinkActive="active-link">Open jobs</a>
+    <a routerLink="/bookings" routerLinkActive="active-link">Bookings</a>
+    <a href="" routerLinkActive="active-link">Schedule</a>
+    <a href="" routerLinkActive="active-link">TimeSheets</a>
+  </div>
+  <app-button
+    [label]="label"
+    [styleClass]="styleClass"
+    (click)="openDialog()"
+  ></app-button>
+</header>

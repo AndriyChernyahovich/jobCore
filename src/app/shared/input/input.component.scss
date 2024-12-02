@@ -1,0 +1,150 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  min-width: 80%;
+  gap: 20px;
+  align-items: center;
+  padding: 6px 8px 6px 16px;
+  border: 1px solid gray;
+  border-radius: 32px;
+
+  & label {
+    font-weight: bold;
+  }
+}
+
+.role-selection {
+  width: 30%;
+}
+
+.selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+.when {
+  display: flex;
+  flex-direction: column;
+
+  & label {
+    margin-left: 10px;
+  }
+}
+
+.from, 
+.to {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.role-selection {
+  display: flex;
+  flex-direction: column;
+
+  & label {
+    padding-left: 10px;
+  }
+}
+
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 14px;
+  width: 100%;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+/* Стилізація стрілки для кастомного вигляду */
+.custom-select::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+.custom-select option {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.custom-select option:hover {
+  background-color: #f0f0f0;
+}
+
+.search-button {
+  border: none;
+  background-color: rgb(243, 69, 69);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+
+  &-img {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+}
+.line {
+  height: 30px;
+  width: 1px;
+  background-color: gray;
+}
+
+/* Забираємо стандартні стилі */
+.custom-select {
+  appearance: none; /* Вимикає стандартну стрілку */
+  -webkit-appearance: none; /* Для Safari */
+  -moz-appearance: none; /* Для Firefox */
+  border: none; /* Видаляє рамку */
+  border-radius: 0; /* Видаляє закруглення */
+  padding: 8px 12px; /* Відступи */
+  font-size: 14px; /* Розмір шрифту */
+  width: 100%; /* Займає весь простір */
+  background-color: white; /* Білий фон */
+  color: black; /* Чорний текст */
+  cursor: pointer; /* Зміна курсора */
+  outline: none; /* Забирає обведення при фокусі */
+}
+
+/* Стиль випадаючого списку */
+.custom-select option {
+  background-color: white; /* Білий фон для опцій */
+  color: black; /* Чорний текст */
+  padding: 5px; /* Відступи */
+  font-size: 14px; /* Розмір шрифту */
+  border: none; /* Без рамок */
+}
+
+/* Ховер-ефект для опцій */
+.custom-select option:hover {
+  background-color: #f0f0f0; /* Світло-сірий фон */
+}
+
+/* Прибрано активну рамку при фокусі */
+.custom-select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+

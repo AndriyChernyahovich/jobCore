@@ -1,0 +1,129 @@
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  & textarea {
+    min-height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #faf9fd;
+    padding: 4px;
+    outline: none;
+  }
+}
+
+.shared-teble-head {
+  text-align: center;
+}
+
+.label-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: red;
+  }
+}
+
+.pick-role {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+
+  &-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+
+  &-name {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 9px 95px 9px 9px;
+    font-weight: bold;
+  }
+}
+
+.contract {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 9px;
+
+  & p {
+    font-weight: bold;
+  }
+}
+
+.pick-time {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  ::ng-deep {
+    .mdc-text-field--filled {
+      background-color: transparent !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+.not-allowed,
+.agreed-paid {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 9px 95px 9px 9px;
+  font-weight: bold;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.role-select {
+  appearance: none; /* Вимикає стандартну стрілку */
+  -webkit-appearance: none; /* Для Safari */
+  -moz-appearance: none; /* Для Firefox */
+  border: 1px solid #ddd; /* Видаляє рамку */
+  border-radius: 8px; /* Видаляє закруглення */
+  padding: 11px; /* Відступи */
+  font-size: 14px;
+  font-weight: 700; /* Розмір шрифту */
+  width: 100%; /* Займає весь простір */
+  background-color: #faf9fd; /* Білий фон */
+  color: black; /* Чорний текст */
+  cursor: pointer; /* Зміна курсора */
+  outline: none; /* Забирає обведення при фокусі */
+}
+
+.role-select option {
+  background-color: white; /* Білий фон для опцій */
+  color: black; /* Чорний текст */
+  padding: 5px; /* Відступи */
+  font-size: 14px; /* Розмір шрифту */
+  border: none; /* Без рамок */
+}
+
+/* Ховер-ефект для опцій */
+.role-select option:hover {
+  background-color: #f0f0f0; /* Світло-сірий фон */
+}
+
+/* Прибрано активну рамку при фокусі */
+.role-select:focus {
+  outline: none;
+  box-shadow: none;
+}

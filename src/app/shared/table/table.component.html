@@ -1,0 +1,39 @@
+<div class="container">
+  <table class="shared-table">
+    <thead class="shared-table-head">
+      <tr>
+        <th *ngFor="let name of columnName">{{ name }}</th>
+      </tr>
+    </thead>
+    <tbody class="shared-table-body">
+      <tr *ngFor="let row of data">
+        <td *ngIf="customTemplate; else defaultTemplate">
+          <ng-container
+            *ngTemplateOutlet="customTemplate; context: { $implicit: row }"
+          ></ng-container>
+        </td>
+        <ng-template #defaultTemplate></ng-template>
+        <!-- <td>{{ row[""] }}</td>
+        </ng-template>
+        <td>{{ row["Rate"] }}</td>
+        <td>{{ row["Journey"] }}</td>
+        <td>{{ row["Availability"] }}</td> -->
+        <td>
+          <button class="book-button" (click)="openDialog()">
+            <img
+              class="book-button-img"
+              src="assets/icons/book.svg"
+              alt="book image"
+            />
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-loading [loading]="loading"></app-loading>
+
+<app-paginator
+        [length]="pagination?.totalCount"
+        [pageSize]="pagination?.pageSize"
+></app-paginator>

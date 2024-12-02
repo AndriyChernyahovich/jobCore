@@ -1,0 +1,21 @@
+.custom-button {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 26px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+
+    &.bg-green {
+        background-color: rgb(27, 148, 108);
+    }
+
+    &.bg-blue {
+        background-color: rgb(78, 174, 219);
+    }
+
+    &.bg-red {
+        background-color: rgb(243, 69, 69);;
+    }
+}

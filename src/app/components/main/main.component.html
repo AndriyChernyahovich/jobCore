@@ -1,0 +1,24 @@
+<app-input></app-input>
+<app-table
+  [columnName]="columnName"
+  [data]="(workers$ | async)?.items ?? []"
+  [customTemplate]="customColumnTemplate"
+  [loading]="loading$()"
+></app-table>
+
+<ng-template #customColumnTemplate let-worker>
+  <div class="worker-info">
+    <img
+      [src]="worker.imageUrl | defaultImage : defaultImage"
+      alt="Worker photo"
+      class="worker-image"
+      (error)="onImageError($event)"
+    />
+    <div class="worker-details">
+      <div class="worker-name">{{ worker?.firstName + ' ' + worker?.lastName  }}</div>
+      <div class="worker-title">{{ worker.jobTitle }}</div>
+    </div>
+  </div>
+
+    {{ worker | json }}
+</ng-template>

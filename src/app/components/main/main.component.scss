@@ -1,0 +1,19 @@
+.worker-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 30px;
+}
+.worker-image {
+    width: 70px;
+    height: 70px;
+}
+
+.worker-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.worker-title {
+    font-size: 14px;
+}

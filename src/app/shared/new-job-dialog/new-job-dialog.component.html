@@ -1,0 +1,75 @@
+<mat-dialog-content class="mat-typography">
+  <div class="dialog-container">
+    <div class="label-menu">
+    <p>I'm looking for</p>
+    <button (click)="closeDialog()">x</button>
+  </div>
+
+    <div class="pick-role">
+      <div class="pick-role-count">
+        <p>1</p>
+      </div>
+        <select class="role-select" name="" id="">
+          <option *ngFor="let option of roles" [value]="option.name">{{option.name}}</option>
+        </select>
+    </div>
+    <p>for</p>
+    <select class="role-select" name="" id="">
+      <option *ngFor="let option of jobType" [value]="option">{{option}}</option>
+    </select>
+
+    <p>on the following days</p>
+
+    <mat-card class="demo-inline-calendar-card">
+      <mat-calendar></mat-calendar>
+    </mat-card>
+
+    <div class="pick-time">
+      <mat-form-field>
+        <mat-label>Pick a time</mat-label>
+        <input
+          matInput
+          [formControl]="formControlFor"
+          [matTimepicker]="pickerFrom"
+          matTimepickerMin="12:30"
+          matTimepickerMax="17:30"
+        />
+        <mat-timepicker-toggle matIconSuffix [for]="pickerFrom" />
+        <mat-timepicker #pickerFrom />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Pick a time</mat-label>
+        <input
+          matInput
+          [formControl]="formControlTo"
+          [matTimepicker]="pickerTo"
+          matTimepickerMin="12:30"
+          matTimepickerMax="17:30"
+        />
+        <mat-timepicker-toggle matIconSuffix [for]="pickerTo" />
+        <mat-timepicker #pickerTo />
+      </mat-form-field>
+    </div>
+
+    <div class="not-allowed">
+      <p>Applications are not allowed</p>
+    </div>
+
+    <p>they will be paid</p>
+    <div class="agreed-paid">
+      <p>An agreed hourly rate</p>
+    </div>
+
+    <p>Additional information</p>
+
+    <textarea name="" id="" placeholder="Description"></textarea>
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+    <div class="dialog-buttons">
+      <app-button label="Close" styleClass="bg-red" (click)="closeDialog()"></app-button>
+      <app-button [label]="label" [styleClass]="styleClass"></app-button>
+    </div>
+  </mat-dialog-actions>

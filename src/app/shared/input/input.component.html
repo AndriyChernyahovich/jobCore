@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="search-bar">
+    <div class="role-selection">
+      <label for="role"> Role</label>
+      <select class="custom-select" name="" id="" (change)="handleChoseRole($event)">
+        <option *ngFor="let option of roles" [value]="option.name">
+          {{ option.name }}
+        </option>
+      </select>
+    </div>
+    <div class="line"></div>
+      <div class="selection">
+        <div class="when">
+          <label for="when">When</label>
+          <select
+            class="custom-select"
+            name=""
+            id=""
+            (change)="onSpecificDay($event)"
+          >
+            <option *ngFor="let option of weekOptions" [value]="option">
+              {{ option }}
+            </option>
+          </select>
+        </div>
+
+        <ng-container *ngIf="showSelectDayMenu">
+          <ng-template #specificDates>
+            <div class="from">
+              <label for="">From</label>
+              <select name="" id="">
+                <option value="">1</option>
+              </select>
+            </div>
+            <div class="to">
+              <label for="">To</label>
+              <select name="" id="">
+                <option value="">2</option>
+              </select>
+            </div>
+          </ng-template>
+          <ng-container *ngTemplateOutlet="specificDates"></ng-container>
+        </ng-container>
+      
+      <button class="search-button">
+        <img
+          class="search-button-img"
+          src="/assets/icons/search.svg"
+          alt="search"
+        />
+      </button>
+    </div>
+    </div>
+  </div>
