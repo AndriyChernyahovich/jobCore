@@ -29,8 +29,8 @@ export class MainService {
 
   constructor(private http: HttpClient) {}
 
-  getAvailebleTeachers(): Observable<Workers> {
-    return this.http.get<Workers>(`${this.API}/workers`);
+  getAvailebleTeachers(params?: string): Observable<Workers> {
+    return this.http.get<Workers>(`${this.API}/workers?${params}`);
   }
 
   getWorkers() {

@@ -10,7 +10,7 @@
     .mdc-circular-progress__determinate-circle,
     .mat-mdc-progress-spinner
     .mdc-circular-progress__indeterminate-circle-graphic {
-      stroke: rgb(27, 148, 108);
+      stroke: rgb(27, 148, 108) !important;
     }
   }
 }

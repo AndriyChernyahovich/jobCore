@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    padding: 30px;
 }
 .worker-image {
     width: 70px;
@@ -16,4 +15,23 @@
 
 .worker-title {
     font-size: 14px;
+}
+
+.item-value {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.book-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+
+    &-img {
+        width: 50px;
+        height: 50px;
+    }
 }
